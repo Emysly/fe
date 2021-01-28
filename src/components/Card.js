@@ -47,7 +47,7 @@ const WarnIcon = styled.div`
   top: 32.57%;
   bottom: 63.57%;
   color: #b4b4bb;
-  font-size: 20px;
+  font-size: 30px;
 `
 
 const Card = ({ number, text, left, right }) => {
