@@ -169,7 +169,9 @@ const Summary = () => {
       <JournalIcon>
         <img src='/images/journal.png' alt='journal' />
       </JournalIcon>
-      <JournalText>2 Journal entries</JournalText>
+      <JournalText>
+        <a href='/'>2 Journal entries</a>
+      </JournalText>
       <FingerPrintIcon>
         <img src='/images/fingerprint.png' alt='fingerprint' />
       </FingerPrintIcon>
