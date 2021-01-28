@@ -2,27 +2,21 @@ import React from 'react'
 import styled from 'styled-components'
 
 const HeaderBox = styled.div`
+  position: absolute;
   height: 52px;
   width: 1400px;
+  left: 0px;
   box-shadow: inset 0px -1px 0px rgba(220, 225, 231, 0.572143);
-  display: flex;
-`
-const LogoBox = styled.div`
-  flex: 1 1 15%;
 `
 
 const Logo = styled.div`
   position: absolute;
-  width: 32px;
-  height: 27.05px;
   top: 10.23px;
   left: 26px;
 `
 
 const LogoText = styled.div`
   position: absolute;
-  width: 120px;
-  height: 22px;
   left: 58px;
   top: 14px;
   font-style: normal;
@@ -30,40 +24,61 @@ const LogoText = styled.div`
   font-size: 14px;
   line-height: 22px;
 `
-const Menu = styled.div`
+const HomeIcon = styled.div`
+  position: absolute;
+  left: 237px;
+  top: 17px;
+`
+
+const HomeText = styled.div`
+  position: absolute;
+  left: 261px;
+  top: 14px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #778699;
+`
+const EntriesIcon = styled.div`
+  position: absolute;
+  left: 330px;
+  top: 17px;
+`
+const EntriesText = styled.div`
+  position: absolute;
+  left: 354px;
+  top: 14px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #778699;
+`
+const DivisionsIcon = styled.div`
+  position: absolute;
+  left: 441px;
+  top: 17px;
+`
+const DivisionsText = styled.div`
+  position: absolute;
+  left: 465px;
+  top: 14px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 22px;
+  color: #006fd6;
+`
+
+const DivisionsBox = styled.div`
   height: 52px;
-  width: 314px;
-  flex: 1 1 25%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-`
-
-const Home = styled.div`
-  width: 87px;
-  padding: 17px 10px;
-  &.active {
-    border-bottom: 4px solid #006fd6;
-    color: #006fd6;
-    background: #deefff;
-  }
-`
-
-const EmptyCol = styled.div`
-  flex: 2 2 35%;
-`
-
-const Row = styled.div`
-  display: flex;
-  flow-direction: column;
-`
-
-const SearchBox = styled.div`
-  flex: 1 1 25%;
-  display: flex;
-  height: 52px;
-  align-items: center;
-  justify-content: space-evenly;
+  width: 110px;
+  background: #deefff;
+  border-bottom: 4px solid #006fd6;
+  position: absolute;
+  left: 429px;
+  top: 1px;
 `
 
 const InputBox = styled.input`
@@ -72,18 +87,22 @@ const InputBox = styled.input`
   border-radius: 4px;
   width: 176px;
   height: 36px;
-  display: flex;
-  align-items: center;
+  position: absolute;
+  left: 1095px;
+  top: 8px;
   padding-left: 16px;
 `
 const SearchIcon = styled.div`
   position: absolute;
   left: 1111px;
-  right: 313px;
   top: 18px;
-  bottom: 18px;
   color: #979797;
   padding-left: 16px;
+`
+const Alert = styled.div`
+  position: absolute;
+  left: 1303.03px;
+  top: 17px;
 `
 
 const UserBox = styled.div`
@@ -91,82 +110,101 @@ const UserBox = styled.div`
   height: 36px;
   width: 36px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  left: 1351px;
+  top: 9px;
 `
 const DropDown = styled.div`
   position: absolute;
-  right: 25.28px;
-  top: 15px;
+  left: 1392px;
+  top: 19px;
   color: #72809d;
 `
 
 const Division = styled.div`
-  display: flex;
-  width: 150px;
-  height: 50px;
-  align-items: center;
-  justify-content: space-between;
+  color: #778699;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  position: absolute;
+  width: 98px;
+  left: 33px;
+  top: 8.1%;
+  bottom: 89.29%;
+  &.active {
+    background: #deefff;
+  }
+`
+
+const PathRight = styled.div`
+  position: absolute;
+  top: 67px;
+  left: 98px;
+`
+
+const Module = styled.div`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  position: absolute;
+  left: 112px;
+  top: 68%;
+  color: #778699;
+  top: 8.1%;
+  bottom: 89.29%;
 `
 
 const Header = () => {
   return (
     <>
       <HeaderBox>
-        <LogoBox>
-          <Logo>
-            <img src='/images/logo.png' alt='logo' />
-          </Logo>
-          <LogoText>FE Engineer Test 1</LogoText>
-        </LogoBox>
-        <Menu>
-          <Home>
-            <img
-              src='/images/home.png'
-              alt='home'
-              style={{ marginRight: '6px' }}
-            />
-            Home
-          </Home>
-          <Home>
-            <img
-              src='/images/entries.png'
-              alt='entries'
-              style={{ marginRight: '6px' }}
-            />
-            Entries
-          </Home>
-          <Home className='active'>
-            <img
-              src='/images/divisions.png'
-              alt='divisions'
-              style={{ marginRight: '6px' }}
-            />
-            Divisions
-          </Home>
-        </Menu>
-        <EmptyCol />
-        <SearchBox>
-          <InputBox />
-          <SearchIcon>
-            <img src='/images/search.png' alt='search' />
-          </SearchIcon>
-
+        <Logo>
+          <img src='/images/logo.png' alt='logo' />
+        </Logo>
+        <LogoText>FE Engineer Test 1</LogoText>
+        <HomeIcon>
+          <img src='/images/home.png' alt='home' />
+        </HomeIcon>
+        <HomeText>Home</HomeText>
+        <EntriesIcon>
+          <img src='/images/entries.png' alt='entries' />
+        </EntriesIcon>
+        <EntriesText>Entries</EntriesText>
+        <DivisionsBox className='active' />
+        <DivisionsIcon>
+          <img src='/images/divisions.png' alt='divisions' />
+        </DivisionsIcon>
+        <DivisionsText>Divisions</DivisionsText>
+        <InputBox />
+        <SearchIcon>
+          <img src='/images/search.png' alt='search' />
+        </SearchIcon>
+        <Alert>
           <img src='/images/bell.png' alt='bell' />
-          <UserBox>
-            <img src='/images/user.png' alt='user' />
-          </UserBox>
-          <DropDown>
-            <img src='/images/right-arrow.png' alt='right-arrow' />
-          </DropDown>
-        </SearchBox>
+        </Alert>
+        <UserBox>
+          <img
+            src='/images/user.png'
+            alt='user'
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+            }}
+          />
+        </UserBox>
+        <DropDown>
+          <img src='/images/right-arrow.png' alt='right-arrow' />
+        </DropDown>
       </HeaderBox>
-      <Row>
-        <Division>
-          Divisions <img src='/images/right-path.png' alt='right-path' /> Module
-        </Division>
-      </Row>
+      <Division>Divisions</Division>
+      <PathRight>
+        <img src='/images/right-path.png' alt='right-path' />
+      </PathRight>
+      <Module>Module</Module>
     </>
   )
 }
