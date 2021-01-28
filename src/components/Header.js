@@ -42,10 +42,6 @@ const Menu = styled.div`
 const Home = styled.div`
   width: 87px;
   padding: 17px 10px;
-  &:hover {
-    background: #deefff;
-    color: #006fd6;
-  }
   &.active {
     border-bottom: 4px solid #006fd6;
     color: #006fd6;
