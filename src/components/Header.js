@@ -48,6 +48,7 @@ const Home = styled.div`
   }
   &.active {
     border-bottom: 4px solid #006fd6;
+    color: #006fd6;
   }
 `
 
